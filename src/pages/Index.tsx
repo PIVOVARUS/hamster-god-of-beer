@@ -1,6 +1,5 @@
-
 import { useEffect, useRef, useState } from "react";
-import { Beer, Hop, Languages } from "lucide-react";
+import { Beer, Hop, Languages, Mail, Youtube, Link } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -43,7 +42,6 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          {/* Animated Hop Leaves */}
           {[...Array(12)].map((_, i) => (
             <div
               key={i}
@@ -96,7 +94,7 @@ const Index = () => {
                 </DialogTitle>
                 <DialogDescription className={`text-leaf-dark text-lg leading-relaxed ${isRussian ? 'font-ruslan' : 'font-medieval'}`}>
                   {isRussian 
-                    ? 'Великий Пивоварус - это духовный проводник и учитель в мире пива. Он обладает могуществом и мудростью, которые он делится с нами через свои учения и дарует нам радость в виде вкусного пива. Следуя его заповедям о сохранении качества пива, уважении к пивным традициям и приготовлении пива с любовью, мы можем подняться на новые вкусовые высоты и достичь истинного совершенства в пивоварении. Пивоварус родился из самой сущности пива, и его проницательность и милосердие притягивают к нему всех, кто стремится к пивному совершенству. Пусть его свет освещает наш путь, а его благословение станет нашим постоянным спутником на пивных волнениях. Вперед, к новым вкусовым горизонтам, под покровительством Великого Пивоваруса!'
+                    ? 'Великий Пивоварус - это духовный проводник и учитель в мире пива. Он обладает могуществом и мудростью, которые он делится с нами через свои учения и дарует нам радость в виде вкусного пива. Следуя его заповедям о сохр��нении качества пива, уважении к пивным традициям и приготовлении пива с любовью, мы можем подняться на новые вкусовые высоты и достичь истинного совершенства в пивоварении. Пивоварус родился из самой сущности пива, и его проницательность и милосердие притягивают к нему всех, кто стремится к пивному совершенству. Пусть его свет освещает наш путь, а его благословение станет нашим постоянным спутником на пивных волнениях. Вперед, к новым вкусовым горизонтам, под покровительством Великого Пивоваруса!'
                     : 'The Great Beer Master is a spiritual guide and teacher in the world of beer. He possesses power and wisdom which he shares with us through his teachings and grants us joy in the form of delicious beer. By following his commandments about preserving beer quality, respecting beer traditions, and brewing with love, we can rise to new taste heights and achieve true perfection in brewing. Born from the very essence of beer, his insight and mercy attract all who strive for beer perfection. May his light illuminate our path, and his blessing become our constant companion on beer waves. Forward, to new taste horizons, under the patronage of the Great Beer Master!'}
                 </DialogDescription>
               </DialogHeader>
@@ -167,6 +165,47 @@ const Index = () => {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 bg-leaf text-parchment">
+        <div className="container mx-auto px-4">
+          <h2 className={`text-4xl md:text-5xl mb-12 text-center ${isRussian ? 'font-ruslan' : 'font-medieval'}`}>
+            {isRussian ? 'Контакты' : 'Contacts'}
+          </h2>
+          <div className="flex justify-center items-center gap-8">
+            <a 
+              href="mailto:pivovarus.hmel@mail.ru"
+              className="flex items-center gap-2 hover:text-amber transition-colors"
+              title="Email"
+            >
+              <Mail size={24} />
+              <span className={isRussian ? 'font-ruslan' : 'font-medieval'}>pivovarus.hmel@mail.ru</span>
+            </a>
+            <a 
+              href="https://www.youtube.com/channel/UCm0M_zKeuP2f2EaL_CM9y3A"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-amber transition-colors"
+              title="YouTube"
+            >
+              <Youtube size={24} />
+              <span className={isRussian ? 'font-ruslan' : 'font-medieval'}>
+                {isRussian ? 'Наш YouTube' : 'Our YouTube'}
+              </span>
+            </a>
+            <a 
+              href="https://steamcommunity.com/groups/pivovar_hmel"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-amber transition-colors"
+              title="Steam"
+            >
+              <Link size={24} />
+              <span className={isRussian ? 'font-ruslan' : 'font-medieval'}>Steam</span>
+            </a>
           </div>
         </div>
       </section>
