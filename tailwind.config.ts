@@ -90,6 +90,7 @@ export default {
       },
       fontFamily: {
         medieval: ["MedievalSharp", "serif"],
+        ruslan: ["Ruslan Display", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

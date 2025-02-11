@@ -66,10 +66,10 @@ const Index = () => {
             {isRussian ? 'English' : 'Русский'}
           </Button>
           
-          <h1 className="font-medieval text-6xl md:text-7xl lg:text-8xl mb-6 text-leaf-dark">
+          <h1 className={`text-6xl md:text-7xl lg:text-8xl mb-6 text-leaf-dark ${isRussian ? 'font-ruslan' : 'font-medieval'}`}>
             {isRussian ? 'Великий Пивной Хомяк' : 'The Great Beer Hamster'}
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-leaf">
+          <p className={`text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-leaf ${isRussian ? 'font-ruslan' : 'font-medieval'}`}>
             {isRussian 
               ? 'Хранитель Священного Хмеля, Мастер Золотого Напитка' 
               : 'Guardian of the Sacred Hops, Master of the Golden Brew'}
@@ -81,11 +81,11 @@ const Index = () => {
       <section className="py-24 bg-gradient-to-b from-parchment to-parchment-dark">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-medieval text-4xl md:text-5xl mb-12 text-center text-leaf-dark">
+            <h2 className={`text-4xl md:text-5xl mb-12 text-center text-leaf-dark ${isRussian ? 'font-ruslan' : 'font-medieval'}`}>
               {isRussian ? 'Легенда' : 'The Legend'}
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6 text-lg">
+              <div className={`space-y-6 text-lg ${isRussian ? 'font-ruslan' : ''}`}>
                 <p>
                   {isRussian 
                     ? 'В мистическом мире ферментации существует самое необычное и выдающееся божество - Хомяк-Бог Пива.'
@@ -117,7 +117,7 @@ const Index = () => {
       {/* Beer Varieties */}
       <section className="py-24 bg-leaf-dark text-parchment">
         <div className="container mx-auto px-4">
-          <h2 className="font-medieval text-4xl md:text-5xl mb-12 text-center">
+          <h2 className={`text-4xl md:text-5xl mb-12 text-center ${isRussian ? 'font-ruslan' : 'font-medieval'}`}>
             {isRussian ? 'Божественные Напитки' : 'Divine Brews'}
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -131,8 +131,8 @@ const Index = () => {
                 className="bg-leaf/50 backdrop-blur-sm rounded-lg p-6 transform hover:-translate-y-2 transition-all duration-300"
               >
                 <Beer className="mx-auto mb-4 text-amber" size={48} />
-                <h3 className="font-medieval text-2xl mb-4 text-center">{beer}</h3>
-                <p className="text-center text-parchment-light">
+                <h3 className={`text-2xl mb-4 text-center ${isRussian ? 'font-ruslan' : 'font-medieval'}`}>{beer}</h3>
+                <p className={`text-center text-parchment-light ${isRussian ? 'font-ruslan' : ''}`}>
                   {isRussian
                     ? 'Божественный напиток, созданный под бдительным оком самого Великого Пивного Хомяка.'
                     : 'A divine brew crafted under the watchful eyes of the Great Beer Hamster himself.'}
