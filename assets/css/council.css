@@ -1,0 +1,11 @@
+
+.council-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+ gap:40px;
+ max-width:1200px;
+ margin:40px auto 80px;
+}
+.council-card{text-align:center}
+.council-card img{width:100%;border:3px solid #fff}
+.council-card p{color:#ffe600;margin-top:10px}

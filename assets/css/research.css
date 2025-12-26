@@ -1,0 +1,21 @@
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+ gap:20px;
+ padding:40px 60px 80px;
+ max-width:1400px;
+ margin:auto;
+}
+.item{opacity:0;transform:translateY(20px);animation:fade .8s forwards}
+.item img{width:100%;cursor:pointer;filter:grayscale(100%);transition:.3s}
+.item img:hover{filter:none;transform:scale(1.03)}
+@keyframes fade{to{opacity:1;transform:none}}
+.modal{
+ display:none;position:fixed;inset:0;
+ background:rgba(0,0,0,.85);
+ justify-content:center;align-items:center
+}
+.modal-content{max-width:900px;background:#111;padding:20px}
+.modal-content img{width:100%}
+.close{color:#ffe600;cursor:pointer;float:right}
